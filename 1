@@ -1,0 +1,19 @@
+# kalkulator.py
+def oblicz():
+    print("--- Prosty Kalkulator ---")
+    try:
+        a = float(input("Podaj pierwszą liczbę: "))
+        op = input("Wybierz operację (+, -, *, /): ")
+        b = float(input("Podaj drugą liczbę: "))
+
+        if op == '+': print(f"Wynik: {a + b}")
+        elif op == '-': print(f"Wynik: {a - b}")
+        elif op == '*': print(f"Wynik: {a * b}")
+        elif op == '/': 
+            print(f"Wynik: {a / b}") if b != 0 else print("Błąd: Dzielenie przez zero!")
+        else: print("Nieznana operacja.")
+    except ValueError:
+        print("Błąd: Wprowadzono nieprawidłowe dane liczbowe.")
+
+if __name__ == "__main__":
+    oblicz()
